@@ -8,9 +8,8 @@
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "npm run build:prod && npm run serve",
-        "serve": "NODE_ENV=production node src/index.js",
-        "build:prod": "webpack --mode production"
+        "start": "node src/index.js",
+        "dev": "nodemon src/index.js"
     },
     "author": "",
     "license": "ISC",
