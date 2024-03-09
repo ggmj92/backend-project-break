@@ -8,11 +8,11 @@
     },
     "scripts": {
         "build": "npm install && npm run build:prod",
-        "build:prod": "tsc",
+        "build:prod": "NODE_ENV=production tsc",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node src/index.js",
-        "dev": "nodemon src/index.js"
-    },
+        "start": "npm run build:prod && npm run serve",
+        "serve": "NODE_ENV=production node src/index.js"
+      },
     "author": "",
     "license": "ISC",
     "dependencies": {
